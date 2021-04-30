@@ -1,6 +1,6 @@
 ﻿namespace EjemploTabs_2021
 {
-    partial class AltaUsuario
+    partial class AñadirUsuario
     {
         /// <summary>
         /// Required designer variable.

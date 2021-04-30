@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace EjemploTabs_2021
 {
-    public partial class Login : Form
+    public partial class Inicio : Form
     {
         Conexion miConexion = new Conexion();
-        public Login()
+        public Inicio()
         {
             InitializeComponent();
         }
@@ -21,11 +21,11 @@ namespace EjemploTabs_2021
         private void botonLogin_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form1 ventana = new Form1();
+            Menu ventana = new Menu();
             ventana.Show();
 
             //string dni = usuario.text; //leo lo que el usuario ha escrito en las cajas
-            //string password = pass.text;
+            //string password = contraseña.text;
             //if (miconexion.logininicial(dni, password))
             //{
             //    this.hide();
@@ -36,6 +36,12 @@ namespace EjemploTabs_2021
             //else {  //o la contraseña o el usuario son incorrectos
             //    messagebox.show("el usuario o la contraseña son incorrectos");
             //}
+        }
+
+        private void registrar_Click(object sender, EventArgs e)
+        {
+            AñadirUsuario ventana = new AñadirUsuario();
+            ventana.Show();
         }
     }
 }

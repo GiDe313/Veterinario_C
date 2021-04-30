@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace EjemploTabs_2021
 {
-    public partial class Form1 : Form
+    public partial class Menu : Form
     {
-        public Form1()
+        public Menu()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AltaUsuario ventana = new AltaUsuario();
+            AñadirUsuario ventana = new AñadirUsuario();
             ventana.Show();
 
         }

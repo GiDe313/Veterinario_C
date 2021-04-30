@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EjemploTabs_2021
 {
-    public partial class AltaUsuario : Form
+    public partial class AñadirUsuario : Form
     {
-        public AltaUsuario()
+        public AñadirUsuario()
         {
             InitializeComponent();
         }
