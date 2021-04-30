@@ -63,9 +63,39 @@ namespace EjemploTabs_2021.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fondodepantalla {
+            get {
+                object obj = ResourceManager.GetObject("fondodepantalla", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap interface_splash_current {
             get {
                 object obj = ResourceManager.GetObject("interface_splash_current", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vetivirlogo_rbg {
+            get {
+                object obj = ResourceManager.GetObject("vetivirlogo-rbg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vetivirnombre_rbg {
+            get {
+                object obj = ResourceManager.GetObject("vetivirnombre-rbg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

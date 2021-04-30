@@ -146,5 +146,14 @@
   <ItemGroup>
     <None Include="Resources\interface_splash_current.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondodepantalla.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vetivirlogo-rbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vetivirnombre-rbg.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
