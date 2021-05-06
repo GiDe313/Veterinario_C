@@ -122,7 +122,7 @@
             this.textBoxObservaciones.Location = new System.Drawing.Point(183, 355);
             this.textBoxObservaciones.Multiline = true;
             this.textBoxObservaciones.Name = "textBoxObservaciones";
-            this.textBoxObservaciones.Size = new System.Drawing.Size(303, 78);
+            this.textBoxObservaciones.Size = new System.Drawing.Size(353, 78);
             this.textBoxObservaciones.TabIndex = 13;
             // 
             // textBoxDueño
@@ -130,7 +130,7 @@
             this.textBoxDueño.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDueño.Location = new System.Drawing.Point(183, 155);
             this.textBoxDueño.Name = "textBoxDueño";
-            this.textBoxDueño.Size = new System.Drawing.Size(303, 24);
+            this.textBoxDueño.Size = new System.Drawing.Size(353, 24);
             this.textBoxDueño.TabIndex = 12;
             // 
             // textBoxEspecie
@@ -138,7 +138,7 @@
             this.textBoxEspecie.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxEspecie.Location = new System.Drawing.Point(183, 303);
             this.textBoxEspecie.Name = "textBoxEspecie";
-            this.textBoxEspecie.Size = new System.Drawing.Size(303, 24);
+            this.textBoxEspecie.Size = new System.Drawing.Size(353, 24);
             this.textBoxEspecie.TabIndex = 11;
             // 
             // textBoxGenero
@@ -146,7 +146,7 @@
             this.textBoxGenero.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxGenero.Location = new System.Drawing.Point(183, 251);
             this.textBoxGenero.Name = "textBoxGenero";
-            this.textBoxGenero.Size = new System.Drawing.Size(303, 24);
+            this.textBoxGenero.Size = new System.Drawing.Size(353, 24);
             this.textBoxGenero.TabIndex = 10;
             // 
             // textBoxNacimiento
@@ -154,7 +154,7 @@
             this.textBoxNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNacimiento.Location = new System.Drawing.Point(183, 200);
             this.textBoxNacimiento.Name = "textBoxNacimiento";
-            this.textBoxNacimiento.Size = new System.Drawing.Size(303, 24);
+            this.textBoxNacimiento.Size = new System.Drawing.Size(353, 24);
             this.textBoxNacimiento.TabIndex = 9;
             // 
             // textBoxNombre
@@ -162,7 +162,7 @@
             this.textBoxNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNombre.Location = new System.Drawing.Point(183, 103);
             this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(303, 24);
+            this.textBoxNombre.Size = new System.Drawing.Size(353, 24);
             this.textBoxNombre.TabIndex = 8;
             // 
             // labelDueño
@@ -277,7 +277,7 @@
             this.textBoxFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxFecha.Location = new System.Drawing.Point(183, 155);
             this.textBoxFecha.Name = "textBoxFecha";
-            this.textBoxFecha.Size = new System.Drawing.Size(303, 24);
+            this.textBoxFecha.Size = new System.Drawing.Size(353, 24);
             this.textBoxFecha.TabIndex = 22;
             // 
             // textBoxMotivo
@@ -286,7 +286,7 @@
             this.textBoxMotivo.Location = new System.Drawing.Point(183, 251);
             this.textBoxMotivo.Multiline = true;
             this.textBoxMotivo.Name = "textBoxMotivo";
-            this.textBoxMotivo.Size = new System.Drawing.Size(303, 117);
+            this.textBoxMotivo.Size = new System.Drawing.Size(353, 117);
             this.textBoxMotivo.TabIndex = 20;
             // 
             // textBoxHora
@@ -294,7 +294,7 @@
             this.textBoxHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxHora.Location = new System.Drawing.Point(183, 200);
             this.textBoxHora.Name = "textBoxHora";
-            this.textBoxHora.Size = new System.Drawing.Size(303, 24);
+            this.textBoxHora.Size = new System.Drawing.Size(353, 24);
             this.textBoxHora.TabIndex = 19;
             // 
             // textBoxNombre2
@@ -302,7 +302,7 @@
             this.textBoxNombre2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxNombre2.Location = new System.Drawing.Point(183, 103);
             this.textBoxNombre2.Name = "textBoxNombre2";
-            this.textBoxNombre2.Size = new System.Drawing.Size(303, 24);
+            this.textBoxNombre2.Size = new System.Drawing.Size(353, 24);
             this.textBoxNombre2.TabIndex = 18;
             // 
             // labelFecha
@@ -480,7 +480,7 @@
             // buttonIntroducirA
             // 
             this.buttonIntroducirA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonIntroducirA.Location = new System.Drawing.Point(303, 439);
+            this.buttonIntroducirA.Location = new System.Drawing.Point(353, 439);
             this.buttonIntroducirA.Name = "buttonIntroducirA";
             this.buttonIntroducirA.Size = new System.Drawing.Size(183, 51);
             this.buttonIntroducirA.TabIndex = 15;
@@ -490,7 +490,7 @@
             // buttonIntroducirR
             // 
             this.buttonIntroducirR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonIntroducirR.Location = new System.Drawing.Point(303, 374);
+            this.buttonIntroducirR.Location = new System.Drawing.Point(353, 374);
             this.buttonIntroducirR.Name = "buttonIntroducirR";
             this.buttonIntroducirR.Size = new System.Drawing.Size(183, 51);
             this.buttonIntroducirR.TabIndex = 24;
