@@ -89,6 +89,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Animales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Animales.Designer.cs">
+      <DependentUpon>Animales.cs</DependentUpon>
+    </Compile>
     <Compile Include="AñadirUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Revisiones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Revisiones.Designer.cs">
+      <DependentUpon>Revisiones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios.Designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Animales.resx">
+      <DependentUpon>Animales.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AñadirUsuario.resx">
       <DependentUpon>AñadirUsuario.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +150,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Revisiones.resx">
+      <DependentUpon>Revisiones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -154,6 +181,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\vetivirnombre-rbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vetivir-rbg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

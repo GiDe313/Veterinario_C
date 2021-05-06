@@ -28,89 +28,55 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.textBoxApellido = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.textBoxPASS = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.textBoxDNI = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.labelNombre = new System.Windows.Forms.Label();
+            this.labelApellidos = new System.Windows.Forms.Label();
+            this.labelEmail = new System.Windows.Forms.Label();
+            this.labelPass = new System.Windows.Forms.Label();
+            this.labelDNI = new System.Windows.Forms.Label();
+            this.logoVetivir = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.logoVetivir)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(49, 68);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre";
             // 
             // textBoxNombre
             // 
-            this.textBoxNombre.Location = new System.Drawing.Point(121, 61);
+            this.textBoxNombre.Location = new System.Drawing.Point(82, 12);
             this.textBoxNombre.Name = "textBoxNombre";
-            this.textBoxNombre.Size = new System.Drawing.Size(667, 20);
+            this.textBoxNombre.Size = new System.Drawing.Size(220, 20);
             this.textBoxNombre.TabIndex = 1;
             // 
             // textBoxApellido
             // 
-            this.textBoxApellido.Location = new System.Drawing.Point(121, 104);
+            this.textBoxApellido.Location = new System.Drawing.Point(82, 64);
             this.textBoxApellido.Name = "textBoxApellido";
-            this.textBoxApellido.Size = new System.Drawing.Size(667, 20);
+            this.textBoxApellido.Size = new System.Drawing.Size(220, 20);
             this.textBoxApellido.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(49, 111);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(49, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Apellidos";
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(121, 150);
+            this.textBoxEmail.Location = new System.Drawing.Point(82, 168);
             this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(667, 20);
+            this.textBoxEmail.Size = new System.Drawing.Size(393, 20);
             this.textBoxEmail.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(49, 157);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(32, 13);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "Email";
             // 
             // textBoxPASS
             // 
-            this.textBoxPASS.Location = new System.Drawing.Point(121, 197);
+            this.textBoxPASS.Location = new System.Drawing.Point(82, 219);
             this.textBoxPASS.Name = "textBoxPASS";
-            this.textBoxPASS.Size = new System.Drawing.Size(667, 20);
+            this.textBoxPASS.Size = new System.Drawing.Size(393, 20);
             this.textBoxPASS.TabIndex = 7;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(49, 204);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "PASS";
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(259, 367);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(130, 252);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(292, 71);
+            this.button1.Size = new System.Drawing.Size(172, 43);
             this.button1.TabIndex = 8;
             this.button1.Text = "Añadir";
             this.button1.UseVisualStyleBackColor = true;
@@ -118,55 +84,114 @@
             // 
             // textBoxDNI
             // 
-            this.textBoxDNI.Location = new System.Drawing.Point(121, 22);
+            this.textBoxDNI.Location = new System.Drawing.Point(82, 116);
             this.textBoxDNI.Name = "textBoxDNI";
-            this.textBoxDNI.Size = new System.Drawing.Size(667, 20);
+            this.textBoxDNI.Size = new System.Drawing.Size(220, 20);
             this.textBoxDNI.TabIndex = 10;
             // 
-            // label5
+            // labelNombre
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(49, 29);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(26, 13);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "DNI";
+            this.labelNombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelNombre.ForeColor = System.Drawing.Color.White;
+            this.labelNombre.Location = new System.Drawing.Point(10, 12);
+            this.labelNombre.Name = "labelNombre";
+            this.labelNombre.Size = new System.Drawing.Size(66, 20);
+            this.labelNombre.TabIndex = 9;
+            this.labelNombre.Text = "Nombre";
+            this.labelNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // AltaUsuario
+            // labelApellidos
+            // 
+            this.labelApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelApellidos.ForeColor = System.Drawing.Color.White;
+            this.labelApellidos.Location = new System.Drawing.Point(10, 64);
+            this.labelApellidos.Name = "labelApellidos";
+            this.labelApellidos.Size = new System.Drawing.Size(66, 20);
+            this.labelApellidos.TabIndex = 11;
+            this.labelApellidos.Text = "Apellidos";
+            this.labelApellidos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelEmail
+            // 
+            this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelEmail.ForeColor = System.Drawing.Color.White;
+            this.labelEmail.Location = new System.Drawing.Point(10, 168);
+            this.labelEmail.Name = "labelEmail";
+            this.labelEmail.Size = new System.Drawing.Size(66, 20);
+            this.labelEmail.TabIndex = 12;
+            this.labelEmail.Text = "Email";
+            this.labelEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelPass
+            // 
+            this.labelPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPass.ForeColor = System.Drawing.Color.White;
+            this.labelPass.Location = new System.Drawing.Point(3, 219);
+            this.labelPass.Name = "labelPass";
+            this.labelPass.Size = new System.Drawing.Size(73, 20);
+            this.labelPass.TabIndex = 13;
+            this.labelPass.Text = "Contraseña";
+            this.labelPass.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelDNI
+            // 
+            this.labelDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDNI.ForeColor = System.Drawing.Color.White;
+            this.labelDNI.Location = new System.Drawing.Point(10, 116);
+            this.labelDNI.Name = "labelDNI";
+            this.labelDNI.Size = new System.Drawing.Size(66, 20);
+            this.labelDNI.TabIndex = 14;
+            this.labelDNI.Text = "DNI";
+            this.labelDNI.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // logoVetivir
+            // 
+            this.logoVetivir.Image = global::EjemploTabs_2021.Properties.Resources.vetivirlogo_rbg;
+            this.logoVetivir.Location = new System.Drawing.Point(308, 1);
+            this.logoVetivir.Name = "logoVetivir";
+            this.logoVetivir.Size = new System.Drawing.Size(179, 150);
+            this.logoVetivir.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.logoVetivir.TabIndex = 15;
+            this.logoVetivir.TabStop = false;
+            // 
+            // AñadirUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(799, 450);
+            this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.ClientSize = new System.Drawing.Size(487, 307);
+            this.Controls.Add(this.labelDNI);
+            this.Controls.Add(this.labelPass);
+            this.Controls.Add(this.labelEmail);
+            this.Controls.Add(this.labelApellidos);
             this.Controls.Add(this.textBoxDNI);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.labelNombre);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBoxPASS);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.textBoxEmail);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.textBoxApellido);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxNombre);
-            this.Controls.Add(this.label1);
-            this.Name = "AltaUsuario";
+            this.Controls.Add(this.logoVetivir);
+            this.Name = "AñadirUsuario";
             this.Text = "AltaUsuario";
+            ((System.ComponentModel.ISupportInitialize)(this.logoVetivir)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBoxNombre;
         private System.Windows.Forms.TextBox textBoxApellido;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxEmail;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBoxPASS;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBoxDNI;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label labelNombre;
+        private System.Windows.Forms.Label labelApellidos;
+        private System.Windows.Forms.Label labelEmail;
+        private System.Windows.Forms.Label labelPass;
+        private System.Windows.Forms.Label labelDNI;
+        private System.Windows.Forms.PictureBox logoVetivir;
     }
 }

@@ -29,5 +29,23 @@ namespace EjemploTabs_2021
             Application.Exit();  //cierra la aplicación
         }
 
+        private void usuarios_Click(object sender, EventArgs e)
+        {
+            Usuarios ventana1 = new Usuarios();
+            ventana1.Show();
+        }
+
+        private void animales_Click(object sender, EventArgs e)
+        {
+            Animales ventana2 = new Animales();
+            ventana2.Show();
+        }
+
+        private void revisiones_Click(object sender, EventArgs e)
+        {
+            Revisiones ventana3 = new Revisiones();
+            ventana3.Show();
+        }
+
     }
 }
