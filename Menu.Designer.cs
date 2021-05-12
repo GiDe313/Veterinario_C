@@ -50,7 +50,6 @@
             this.tabRevision = new System.Windows.Forms.TabPage();
             this.buttonIRevision = new System.Windows.Forms.Button();
             this.buttonERevision = new System.Windows.Forms.Button();
-            this.textBoxFecha = new System.Windows.Forms.TextBox();
             this.textBoxMotivo = new System.Windows.Forms.TextBox();
             this.textBoxNombre2 = new System.Windows.Forms.TextBox();
             this.labelFecha = new System.Windows.Forms.Label();
@@ -64,6 +63,7 @@
             this.buttonUsuarios = new System.Windows.Forms.Button();
             this.listaImagenes = new System.Windows.Forms.ImageList(this.components);
             this.mySqlDataAdapter1 = new MySql.Data.MySqlClient.MySqlDataAdapter();
+            this.dateTimePickerFecha = new System.Windows.Forms.DateTimePicker();
             this.tabControl.SuspendLayout();
             this.tabAnimales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo1)).BeginInit();
@@ -273,9 +273,9 @@
             // 
             this.tabRevision.BackgroundImage = global::EjemploTabs_2021.Properties.Resources.fondodepantalla;
             this.tabRevision.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabRevision.Controls.Add(this.dateTimePickerFecha);
             this.tabRevision.Controls.Add(this.buttonIRevision);
             this.tabRevision.Controls.Add(this.buttonERevision);
-            this.tabRevision.Controls.Add(this.textBoxFecha);
             this.tabRevision.Controls.Add(this.textBoxMotivo);
             this.tabRevision.Controls.Add(this.textBoxNombre2);
             this.tabRevision.Controls.Add(this.labelFecha);
@@ -312,14 +312,6 @@
             this.buttonERevision.Text = "Eliminar un registro";
             this.buttonERevision.UseVisualStyleBackColor = true;
             this.buttonERevision.Click += new System.EventHandler(this.buttonRRevision_Click);
-            // 
-            // textBoxFecha
-            // 
-            this.textBoxFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxFecha.Location = new System.Drawing.Point(183, 155);
-            this.textBoxFecha.Name = "textBoxFecha";
-            this.textBoxFecha.Size = new System.Drawing.Size(353, 24);
-            this.textBoxFecha.TabIndex = 22;
             // 
             // textBoxMotivo
             // 
@@ -461,6 +453,13 @@
             this.mySqlDataAdapter1.SelectCommand = null;
             this.mySqlDataAdapter1.UpdateCommand = null;
             // 
+            // dateTimePickerFecha
+            // 
+            this.dateTimePickerFecha.Location = new System.Drawing.Point(183, 156);
+            this.dateTimePickerFecha.Name = "dateTimePickerFecha";
+            this.dateTimePickerFecha.Size = new System.Drawing.Size(353, 20);
+            this.dateTimePickerFecha.TabIndex = 25;
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -506,7 +505,6 @@
         private System.Windows.Forms.TextBox textBoxGenero;
         private System.Windows.Forms.TextBox textBoxNacimiento;
         private System.Windows.Forms.TextBox textBoxNombre;
-        private System.Windows.Forms.TextBox textBoxFecha;
         private System.Windows.Forms.TextBox textBoxMotivo;
         private System.Windows.Forms.TextBox textBoxNombre2;
         private System.Windows.Forms.Label labelFecha;
@@ -521,6 +519,7 @@
         private System.Windows.Forms.Button buttonERevision;
         private System.Windows.Forms.Button buttonIAnimal;
         private System.Windows.Forms.Button buttonIRevision;
+        private System.Windows.Forms.DateTimePicker dateTimePickerFecha;
     }
 }
 
