@@ -56,13 +56,14 @@
             // EtiquetaUsuario
             // 
             this.EtiquetaUsuario.AutoSize = true;
+            this.EtiquetaUsuario.BackColor = System.Drawing.Color.Transparent;
             this.EtiquetaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EtiquetaUsuario.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.EtiquetaUsuario.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.EtiquetaUsuario.Location = new System.Drawing.Point(15, 134);
             this.EtiquetaUsuario.Name = "EtiquetaUsuario";
-            this.EtiquetaUsuario.Size = new System.Drawing.Size(116, 33);
+            this.EtiquetaUsuario.Size = new System.Drawing.Size(65, 33);
             this.EtiquetaUsuario.TabIndex = 1;
-            this.EtiquetaUsuario.Text = "Usuario";
+            this.EtiquetaUsuario.Text = "DNI";
             // 
             // usuario
             // 
@@ -75,8 +76,9 @@
             // EtiquetaContraseña
             // 
             this.EtiquetaContraseña.AutoSize = true;
+            this.EtiquetaContraseña.BackColor = System.Drawing.Color.Transparent;
             this.EtiquetaContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EtiquetaContraseña.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.EtiquetaContraseña.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.EtiquetaContraseña.Location = new System.Drawing.Point(15, 167);
             this.EtiquetaContraseña.Name = "EtiquetaContraseña";
             this.EtiquetaContraseña.Size = new System.Drawing.Size(165, 33);
@@ -114,6 +116,7 @@
             // 
             // nombre
             // 
+            this.nombre.BackColor = System.Drawing.Color.Transparent;
             this.nombre.Image = global::EjemploTabs_2021.Properties.Resources.vetivirnombre_rbg;
             this.nombre.Location = new System.Drawing.Point(132, 4);
             this.nombre.Name = "nombre";
@@ -124,6 +127,7 @@
             // 
             // logo
             // 
+            this.logo.BackColor = System.Drawing.Color.Transparent;
             this.logo.Image = global::EjemploTabs_2021.Properties.Resources.vetivirlogo_rbg;
             this.logo.Location = new System.Drawing.Point(2, 2);
             this.logo.Name = "logo";
@@ -137,6 +141,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.BackgroundImage = global::EjemploTabs_2021.Properties.Resources.fondoInicio;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(511, 324);
             this.Controls.Add(this.nombre);
             this.Controls.Add(this.recContraseña);

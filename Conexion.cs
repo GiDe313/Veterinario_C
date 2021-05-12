@@ -13,14 +13,14 @@ namespace EjemploTabs_2021
         public MySqlConnection conexion; //variable que se encarga de conectarnos al servidor MySql
 
         public Conexion() { //el constructor de la clase
-            conexion = new MySqlConnection("Server=127.0.0.1; Database=test; Uid=root; Pwd=; Port=3306 ");
+            conexion = new MySqlConnection("Server=127.0.0.1; Database=veterinario; Uid=root; Pwd=; Port=3306 ");
         }
 
         public Boolean loginInicial(String _DNI, String _password) {
             try {
                 conexion.Open();
                 
-                MySqlCommand consulta = new MySqlCommand("SELECT * FROM usuario WHERE DNI=@_DNI AND password=@_password", conexion);
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM login WHERE dni=@_DNI AND pass=@_password", conexion);
                 consulta.Parameters.AddWithValue("@_DNI", _DNI);
                 consulta.Parameters.AddWithValue("@_password", _password);
 
@@ -37,19 +37,16 @@ namespace EjemploTabs_2021
             catch (MySqlException e) {
                 throw e;
             }
-
         }
 
-        public Boolean insertausuario(String _DNI, String _Nombre, String _Apellido, String _email, String _password)
+        public Boolean insertausuario(String _DNI, String _Nombre, String _password)
         {
             try
             {
                 conexion.Open();
-                MySqlCommand consulta = new MySqlCommand("INSERT INTO usuario (DNI, Nombre, Apellido, password, email, perfil)  VALUES (@_DNI, @_Nombre, @_Apellido, @_password, @_email, 0)", conexion);
+                MySqlCommand consulta = new MySqlCommand("INSERT INTO login (dni, nombre, pass)  VALUES (@_DNI, @_Nombre, @_password, 0)", conexion);
                 consulta.Parameters.AddWithValue("@_DNI", _DNI);
                 consulta.Parameters.AddWithValue("@_Nombre", _Nombre);
-                consulta.Parameters.AddWithValue("@_Apellido", _Apellido);
-                consulta.Parameters.AddWithValue("@_email", _email);
                 consulta.Parameters.AddWithValue("@_password", _password);
 
                 int resultado = consulta.ExecuteNonQuery(); //Ejecuta el insert
@@ -67,9 +64,6 @@ namespace EjemploTabs_2021
                 return false;
                 throw e;
             }
-
         }
-
-
     }
 }

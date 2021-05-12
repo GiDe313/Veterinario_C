@@ -47,5 +47,16 @@ namespace EjemploTabs_2021
             ventana3.Show();
         }
 
+        private void buttonEAnimal_Click(object sender, EventArgs e)
+        {
+            EliminarAnimal ventana4 = new EliminarAnimal();
+            ventana4.Show();
+        }
+
+        private void buttonRRevision_Click(object sender, EventArgs e)
+        {
+            EliminarRevision ventana5 = new EliminarRevision();
+            ventana5.Show();
+        }
     }
 }

@@ -20,7 +20,7 @@ namespace EjemploTabs_2021
         private void button1_Click(object sender, EventArgs e)
         {
             Conexion miConexion = new Conexion();
-            Boolean resultado = miConexion.insertausuario(textBoxDNI.Text, textBoxNombre.Text, textBoxApellido.Text, textBoxEmail.Text, textBoxPASS.Text);
+            Boolean resultado = miConexion.insertausuario(textBoxDNI.Text, textBoxNombre.Text, textBoxPASS.Text);
             if (resultado)
             {
                 MessageBox.Show("INSERTADO CORRECTAMENTE");

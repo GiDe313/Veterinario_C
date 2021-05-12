@@ -13,6 +13,7 @@ namespace EjemploTabs_2021
     public partial class Inicio : Form
     {
         Conexion miConexion = new Conexion();
+
         public Inicio()
         {
             InitializeComponent();
@@ -20,22 +21,23 @@ namespace EjemploTabs_2021
 
         private void botonLogin_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Menu ventana = new Menu();
-            ventana.Show();
+            //this.Hide();
+            //Menu ventana = new Menu();
+            //ventana.Show();
 
-            //string dni = usuario.text; //leo lo que el usuario ha escrito en las cajas
-            //string password = contraseña.text;
-            //if (miconexion.logininicial(dni, password))
-            //{
-            //    this.hide();
-            //    form1 ventana = new form1();
-            //    ventana.show();
-
-            //}
-            //else {  //o la contraseña o el usuario son incorrectos
-            //    messagebox.show("el usuario o la contraseña son incorrectos");
-            //}
+            string dni = usuario.Text; //leo lo que el usuario ha escrito en las cajas
+            string pass = contraseña.Text;
+            if (miConexion.loginInicial(dni, pass))
+            {
+                this.Hide();
+                Menu ventana = new Menu();
+                ventana.Show();
+            }
+            else {  //o la contraseña o el usuario son incorrectos
+                this.Hide();
+                Inicio ventana2 = new Inicio();
+                ventana2.Show();
+            }
         }
 
         private void registrar_Click(object sender, EventArgs e)

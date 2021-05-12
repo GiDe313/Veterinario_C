@@ -29,14 +29,10 @@
         private void InitializeComponent()
         {
             this.textBoxNombre = new System.Windows.Forms.TextBox();
-            this.textBoxApellido = new System.Windows.Forms.TextBox();
-            this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.textBoxPASS = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.textBoxDNI = new System.Windows.Forms.TextBox();
             this.labelNombre = new System.Windows.Forms.Label();
-            this.labelApellidos = new System.Windows.Forms.Label();
-            this.labelEmail = new System.Windows.Forms.Label();
             this.labelPass = new System.Windows.Forms.Label();
             this.labelDNI = new System.Windows.Forms.Label();
             this.logoVetivir = new System.Windows.Forms.PictureBox();
@@ -50,31 +46,17 @@
             this.textBoxNombre.Size = new System.Drawing.Size(220, 20);
             this.textBoxNombre.TabIndex = 1;
             // 
-            // textBoxApellido
-            // 
-            this.textBoxApellido.Location = new System.Drawing.Point(82, 64);
-            this.textBoxApellido.Name = "textBoxApellido";
-            this.textBoxApellido.Size = new System.Drawing.Size(220, 20);
-            this.textBoxApellido.TabIndex = 3;
-            // 
-            // textBoxEmail
-            // 
-            this.textBoxEmail.Location = new System.Drawing.Point(82, 168);
-            this.textBoxEmail.Name = "textBoxEmail";
-            this.textBoxEmail.Size = new System.Drawing.Size(393, 20);
-            this.textBoxEmail.TabIndex = 5;
-            // 
             // textBoxPASS
             // 
-            this.textBoxPASS.Location = new System.Drawing.Point(82, 219);
+            this.textBoxPASS.Location = new System.Drawing.Point(82, 118);
             this.textBoxPASS.Name = "textBoxPASS";
-            this.textBoxPASS.Size = new System.Drawing.Size(393, 20);
+            this.textBoxPASS.Size = new System.Drawing.Size(220, 20);
             this.textBoxPASS.TabIndex = 7;
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(130, 252);
+            this.button1.Location = new System.Drawing.Point(69, 169);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(172, 43);
             this.button1.TabIndex = 8;
@@ -84,7 +66,7 @@
             // 
             // textBoxDNI
             // 
-            this.textBoxDNI.Location = new System.Drawing.Point(82, 116);
+            this.textBoxDNI.Location = new System.Drawing.Point(82, 65);
             this.textBoxDNI.Name = "textBoxDNI";
             this.textBoxDNI.Size = new System.Drawing.Size(220, 20);
             this.textBoxDNI.TabIndex = 10;
@@ -100,33 +82,11 @@
             this.labelNombre.Text = "Nombre";
             this.labelNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelApellidos
-            // 
-            this.labelApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelApellidos.ForeColor = System.Drawing.Color.White;
-            this.labelApellidos.Location = new System.Drawing.Point(10, 64);
-            this.labelApellidos.Name = "labelApellidos";
-            this.labelApellidos.Size = new System.Drawing.Size(66, 20);
-            this.labelApellidos.TabIndex = 11;
-            this.labelApellidos.Text = "Apellidos";
-            this.labelApellidos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // labelEmail
-            // 
-            this.labelEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmail.ForeColor = System.Drawing.Color.White;
-            this.labelEmail.Location = new System.Drawing.Point(10, 168);
-            this.labelEmail.Name = "labelEmail";
-            this.labelEmail.Size = new System.Drawing.Size(66, 20);
-            this.labelEmail.TabIndex = 12;
-            this.labelEmail.Text = "Email";
-            this.labelEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // labelPass
             // 
             this.labelPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPass.ForeColor = System.Drawing.Color.White;
-            this.labelPass.Location = new System.Drawing.Point(3, 219);
+            this.labelPass.Location = new System.Drawing.Point(3, 118);
             this.labelPass.Name = "labelPass";
             this.labelPass.Size = new System.Drawing.Size(73, 20);
             this.labelPass.TabIndex = 13;
@@ -137,7 +97,7 @@
             // 
             this.labelDNI.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDNI.ForeColor = System.Drawing.Color.White;
-            this.labelDNI.Location = new System.Drawing.Point(10, 116);
+            this.labelDNI.Location = new System.Drawing.Point(12, 64);
             this.labelDNI.Name = "labelDNI";
             this.labelDNI.Size = new System.Drawing.Size(66, 20);
             this.labelDNI.TabIndex = 14;
@@ -159,17 +119,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.ClientSize = new System.Drawing.Size(487, 307);
+            this.ClientSize = new System.Drawing.Size(487, 229);
             this.Controls.Add(this.labelDNI);
             this.Controls.Add(this.labelPass);
-            this.Controls.Add(this.labelEmail);
-            this.Controls.Add(this.labelApellidos);
             this.Controls.Add(this.textBoxDNI);
             this.Controls.Add(this.labelNombre);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBoxPASS);
-            this.Controls.Add(this.textBoxEmail);
-            this.Controls.Add(this.textBoxApellido);
             this.Controls.Add(this.textBoxNombre);
             this.Controls.Add(this.logoVetivir);
             this.Name = "AñadirUsuario";
@@ -182,14 +138,10 @@
 
         #endregion
         private System.Windows.Forms.TextBox textBoxNombre;
-        private System.Windows.Forms.TextBox textBoxApellido;
-        private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.TextBox textBoxPASS;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBoxDNI;
         private System.Windows.Forms.Label labelNombre;
-        private System.Windows.Forms.Label labelApellidos;
-        private System.Windows.Forms.Label labelEmail;
         private System.Windows.Forms.Label labelPass;
         private System.Windows.Forms.Label labelDNI;
         private System.Windows.Forms.PictureBox logoVetivir;

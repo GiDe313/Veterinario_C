@@ -31,7 +31,15 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.tabControl = new System.Windows.Forms.TabControl();
+            this.tabbasedatos = new System.Windows.Forms.TabPage();
+            this.revisiones = new System.Windows.Forms.Button();
+            this.animales = new System.Windows.Forms.Button();
+            this.usuarios = new System.Windows.Forms.Button();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.mySqlDataAdapter1 = new MySql.Data.MySqlClient.MySqlDataAdapter();
             this.tabanimales = new System.Windows.Forms.TabPage();
+            this.buttonIntroducirA = new System.Windows.Forms.Button();
+            this.buttonEAnimal = new System.Windows.Forms.Button();
             this.textBoxObservaciones = new System.Windows.Forms.TextBox();
             this.textBoxDueño = new System.Windows.Forms.TextBox();
             this.textBoxEspecie = new System.Windows.Forms.TextBox();
@@ -46,32 +54,22 @@
             this.labelNombre = new System.Windows.Forms.Label();
             this.logo2 = new System.Windows.Forms.PictureBox();
             this.tabrevision = new System.Windows.Forms.TabPage();
+            this.buttonIntroducirR = new System.Windows.Forms.Button();
+            this.buttonRRevision = new System.Windows.Forms.Button();
             this.textBoxFecha = new System.Windows.Forms.TextBox();
             this.textBoxMotivo = new System.Windows.Forms.TextBox();
-            this.textBoxHora = new System.Windows.Forms.TextBox();
             this.textBoxNombre2 = new System.Windows.Forms.TextBox();
             this.labelFecha = new System.Windows.Forms.Label();
-            this.labelHora = new System.Windows.Forms.Label();
             this.labelMotivo = new System.Windows.Forms.Label();
             this.labelNombre2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.tabbasedatos = new System.Windows.Forms.TabPage();
-            this.revisiones = new System.Windows.Forms.Button();
-            this.animales = new System.Windows.Forms.Button();
-            this.usuarios = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.mySqlDataAdapter1 = new MySql.Data.MySqlClient.MySqlDataAdapter();
             this.logo3 = new System.Windows.Forms.PictureBox();
-            this.buttonEAnimal = new System.Windows.Forms.Button();
-            this.buttonRRevision = new System.Windows.Forms.Button();
-            this.buttonIntroducirA = new System.Windows.Forms.Button();
-            this.buttonIntroducirR = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
+            this.tabbasedatos.SuspendLayout();
             this.tabanimales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo2)).BeginInit();
             this.tabrevision.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tabbasedatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,11 +80,76 @@
             this.tabControl.Controls.Add(this.tabbasedatos);
             this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tabControl.ImageList = this.imageList1;
+            this.tabControl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.tabControl.Location = new System.Drawing.Point(0, 0);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedIndex = 0;
             this.tabControl.Size = new System.Drawing.Size(611, 547);
             this.tabControl.TabIndex = 0;
+            // 
+            // tabbasedatos
+            // 
+            this.tabbasedatos.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.tabbasedatos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.tabbasedatos.Controls.Add(this.logo3);
+            this.tabbasedatos.Controls.Add(this.revisiones);
+            this.tabbasedatos.Controls.Add(this.animales);
+            this.tabbasedatos.Controls.Add(this.usuarios);
+            this.tabbasedatos.ImageIndex = 2;
+            this.tabbasedatos.Location = new System.Drawing.Point(4, 39);
+            this.tabbasedatos.Name = "tabbasedatos";
+            this.tabbasedatos.Padding = new System.Windows.Forms.Padding(3);
+            this.tabbasedatos.Size = new System.Drawing.Size(603, 504);
+            this.tabbasedatos.TabIndex = 2;
+            this.tabbasedatos.Text = "Buscar en la base de datos";
+            // 
+            // revisiones
+            // 
+            this.revisiones.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.revisiones.Location = new System.Drawing.Point(111, 310);
+            this.revisiones.Name = "revisiones";
+            this.revisiones.Size = new System.Drawing.Size(363, 77);
+            this.revisiones.TabIndex = 2;
+            this.revisiones.Text = "Revisiones";
+            this.revisiones.UseVisualStyleBackColor = true;
+            this.revisiones.Click += new System.EventHandler(this.revisiones_Click);
+            // 
+            // animales
+            // 
+            this.animales.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.animales.Location = new System.Drawing.Point(111, 207);
+            this.animales.Name = "animales";
+            this.animales.Size = new System.Drawing.Size(363, 77);
+            this.animales.TabIndex = 1;
+            this.animales.Text = "Animales";
+            this.animales.UseVisualStyleBackColor = true;
+            this.animales.Click += new System.EventHandler(this.animales_Click);
+            // 
+            // usuarios
+            // 
+            this.usuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usuarios.Location = new System.Drawing.Point(111, 104);
+            this.usuarios.Name = "usuarios";
+            this.usuarios.Size = new System.Drawing.Size(363, 77);
+            this.usuarios.TabIndex = 0;
+            this.usuarios.Text = "Usuarios";
+            this.usuarios.UseVisualStyleBackColor = true;
+            this.usuarios.Click += new System.EventHandler(this.usuarios_Click);
+            // 
+            // imageList1
+            // 
+            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList1.Images.SetKeyName(0, "iconoMascota.png");
+            this.imageList1.Images.SetKeyName(1, "iconoRevision.png");
+            this.imageList1.Images.SetKeyName(2, "iconoBasededatos.png");
+            // 
+            // mySqlDataAdapter1
+            // 
+            this.mySqlDataAdapter1.DeleteCommand = null;
+            this.mySqlDataAdapter1.InsertCommand = null;
+            this.mySqlDataAdapter1.SelectCommand = null;
+            this.mySqlDataAdapter1.UpdateCommand = null;
             // 
             // tabanimales
             // 
@@ -107,7 +170,7 @@
             this.tabanimales.Controls.Add(this.labelObservaciones);
             this.tabanimales.Controls.Add(this.labelNombre);
             this.tabanimales.Controls.Add(this.logo2);
-            this.tabanimales.ImageIndex = 13;
+            this.tabanimales.ImageIndex = 0;
             this.tabanimales.Location = new System.Drawing.Point(4, 39);
             this.tabanimales.Name = "tabanimales";
             this.tabanimales.Padding = new System.Windows.Forms.Padding(3);
@@ -115,6 +178,28 @@
             this.tabanimales.TabIndex = 0;
             this.tabanimales.Text = "Registrar animales";
             this.tabanimales.UseVisualStyleBackColor = true;
+            // 
+            // buttonIntroducirA
+            // 
+            this.buttonIntroducirA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonIntroducirA.Location = new System.Drawing.Point(353, 439);
+            this.buttonIntroducirA.Name = "buttonIntroducirA";
+            this.buttonIntroducirA.Size = new System.Drawing.Size(183, 51);
+            this.buttonIntroducirA.TabIndex = 15;
+            this.buttonIntroducirA.Text = "Introducir registro";
+            this.buttonIntroducirA.UseVisualStyleBackColor = true;
+            // 
+            // buttonEAnimal
+            // 
+            this.buttonEAnimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonEAnimal.ForeColor = System.Drawing.Color.Red;
+            this.buttonEAnimal.Location = new System.Drawing.Point(49, 463);
+            this.buttonEAnimal.Name = "buttonEAnimal";
+            this.buttonEAnimal.Size = new System.Drawing.Size(181, 33);
+            this.buttonEAnimal.TabIndex = 14;
+            this.buttonEAnimal.Text = "Eliminar un registro";
+            this.buttonEAnimal.UseVisualStyleBackColor = true;
+            this.buttonEAnimal.Click += new System.EventHandler(this.buttonEAnimal_Click);
             // 
             // textBoxObservaciones
             // 
@@ -170,9 +255,9 @@
             this.labelDueño.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.labelDueño.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDueño.ForeColor = System.Drawing.Color.White;
-            this.labelDueño.Location = new System.Drawing.Point(49, 153);
+            this.labelDueño.Location = new System.Drawing.Point(46, 153);
             this.labelDueño.Name = "labelDueño";
-            this.labelDueño.Size = new System.Drawing.Size(128, 26);
+            this.labelDueño.Size = new System.Drawing.Size(131, 26);
             this.labelDueño.TabIndex = 6;
             this.labelDueño.Text = "Dueño";
             this.labelDueño.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -256,14 +341,12 @@
             this.tabrevision.Controls.Add(this.buttonRRevision);
             this.tabrevision.Controls.Add(this.textBoxFecha);
             this.tabrevision.Controls.Add(this.textBoxMotivo);
-            this.tabrevision.Controls.Add(this.textBoxHora);
             this.tabrevision.Controls.Add(this.textBoxNombre2);
             this.tabrevision.Controls.Add(this.labelFecha);
-            this.tabrevision.Controls.Add(this.labelHora);
             this.tabrevision.Controls.Add(this.labelMotivo);
             this.tabrevision.Controls.Add(this.labelNombre2);
             this.tabrevision.Controls.Add(this.pictureBox1);
-            this.tabrevision.ImageIndex = 17;
+            this.tabrevision.ImageIndex = 1;
             this.tabrevision.Location = new System.Drawing.Point(4, 39);
             this.tabrevision.Name = "tabrevision";
             this.tabrevision.Padding = new System.Windows.Forms.Padding(3);
@@ -271,6 +354,28 @@
             this.tabrevision.TabIndex = 1;
             this.tabrevision.Text = "Añadir revisiones";
             this.tabrevision.UseVisualStyleBackColor = true;
+            // 
+            // buttonIntroducirR
+            // 
+            this.buttonIntroducirR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonIntroducirR.Location = new System.Drawing.Point(353, 323);
+            this.buttonIntroducirR.Name = "buttonIntroducirR";
+            this.buttonIntroducirR.Size = new System.Drawing.Size(183, 51);
+            this.buttonIntroducirR.TabIndex = 24;
+            this.buttonIntroducirR.Text = "Introducir registro";
+            this.buttonIntroducirR.UseVisualStyleBackColor = true;
+            // 
+            // buttonRRevision
+            // 
+            this.buttonRRevision.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonRRevision.ForeColor = System.Drawing.Color.Red;
+            this.buttonRRevision.Location = new System.Drawing.Point(49, 463);
+            this.buttonRRevision.Name = "buttonRRevision";
+            this.buttonRRevision.Size = new System.Drawing.Size(181, 33);
+            this.buttonRRevision.TabIndex = 23;
+            this.buttonRRevision.Text = "Eliminar un registro";
+            this.buttonRRevision.UseVisualStyleBackColor = true;
+            this.buttonRRevision.Click += new System.EventHandler(this.buttonRRevision_Click);
             // 
             // textBoxFecha
             // 
@@ -283,19 +388,11 @@
             // textBoxMotivo
             // 
             this.textBoxMotivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxMotivo.Location = new System.Drawing.Point(183, 251);
+            this.textBoxMotivo.Location = new System.Drawing.Point(183, 200);
             this.textBoxMotivo.Multiline = true;
             this.textBoxMotivo.Name = "textBoxMotivo";
             this.textBoxMotivo.Size = new System.Drawing.Size(353, 117);
             this.textBoxMotivo.TabIndex = 20;
-            // 
-            // textBoxHora
-            // 
-            this.textBoxHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxHora.Location = new System.Drawing.Point(183, 200);
-            this.textBoxHora.Name = "textBoxHora";
-            this.textBoxHora.Size = new System.Drawing.Size(353, 24);
-            this.textBoxHora.TabIndex = 19;
             // 
             // textBoxNombre2
             // 
@@ -317,24 +414,12 @@
             this.labelFecha.Text = "Fecha";
             this.labelFecha.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // labelHora
-            // 
-            this.labelHora.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.labelHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHora.ForeColor = System.Drawing.Color.White;
-            this.labelHora.Location = new System.Drawing.Point(46, 198);
-            this.labelHora.Name = "labelHora";
-            this.labelHora.Size = new System.Drawing.Size(131, 26);
-            this.labelHora.TabIndex = 16;
-            this.labelHora.Text = "Hora";
-            this.labelHora.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // labelMotivo
             // 
             this.labelMotivo.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.labelMotivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMotivo.ForeColor = System.Drawing.Color.White;
-            this.labelMotivo.Location = new System.Drawing.Point(46, 249);
+            this.labelMotivo.Location = new System.Drawing.Point(46, 198);
             this.labelMotivo.Name = "labelMotivo";
             this.labelMotivo.Size = new System.Drawing.Size(131, 26);
             this.labelMotivo.TabIndex = 15;
@@ -364,86 +449,6 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // tabbasedatos
-            // 
-            this.tabbasedatos.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.tabbasedatos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.tabbasedatos.Controls.Add(this.logo3);
-            this.tabbasedatos.Controls.Add(this.revisiones);
-            this.tabbasedatos.Controls.Add(this.animales);
-            this.tabbasedatos.Controls.Add(this.usuarios);
-            this.tabbasedatos.ImageIndex = 1;
-            this.tabbasedatos.Location = new System.Drawing.Point(4, 39);
-            this.tabbasedatos.Name = "tabbasedatos";
-            this.tabbasedatos.Padding = new System.Windows.Forms.Padding(3);
-            this.tabbasedatos.Size = new System.Drawing.Size(603, 504);
-            this.tabbasedatos.TabIndex = 2;
-            this.tabbasedatos.Text = "Buscar en la base de datos";
-            // 
-            // revisiones
-            // 
-            this.revisiones.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.revisiones.Location = new System.Drawing.Point(111, 310);
-            this.revisiones.Name = "revisiones";
-            this.revisiones.Size = new System.Drawing.Size(363, 77);
-            this.revisiones.TabIndex = 2;
-            this.revisiones.Text = "Revisiones";
-            this.revisiones.UseVisualStyleBackColor = true;
-            this.revisiones.Click += new System.EventHandler(this.revisiones_Click);
-            // 
-            // animales
-            // 
-            this.animales.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.animales.Location = new System.Drawing.Point(111, 207);
-            this.animales.Name = "animales";
-            this.animales.Size = new System.Drawing.Size(363, 77);
-            this.animales.TabIndex = 1;
-            this.animales.Text = "Animales";
-            this.animales.UseVisualStyleBackColor = true;
-            this.animales.Click += new System.EventHandler(this.animales_Click);
-            // 
-            // usuarios
-            // 
-            this.usuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usuarios.Location = new System.Drawing.Point(111, 104);
-            this.usuarios.Name = "usuarios";
-            this.usuarios.Size = new System.Drawing.Size(363, 77);
-            this.usuarios.TabIndex = 0;
-            this.usuarios.Text = "Usuarios";
-            this.usuarios.UseVisualStyleBackColor = true;
-            this.usuarios.Click += new System.EventHandler(this.usuarios_Click);
-            // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "icons8_business.ico");
-            this.imageList1.Images.SetKeyName(1, "icons8_dog_leash.ico");
-            this.imageList1.Images.SetKeyName(2, "icons8_dog_pooping.ico");
-            this.imageList1.Images.SetKeyName(3, "icons8_doggy_bag.ico");
-            this.imageList1.Images.SetKeyName(4, "icons8_heart_outline.ico");
-            this.imageList1.Images.SetKeyName(5, "icons8_horse.ico");
-            this.imageList1.Images.SetKeyName(6, "icons8_maintenance.ico");
-            this.imageList1.Images.SetKeyName(7, "icons8_pig.ico");
-            this.imageList1.Images.SetKeyName(8, "icons8_pig_1.ico");
-            this.imageList1.Images.SetKeyName(9, "icons8_print.ico");
-            this.imageList1.Images.SetKeyName(10, "icons8_pug.ico");
-            this.imageList1.Images.SetKeyName(11, "icons8_queen_bee.ico");
-            this.imageList1.Images.SetKeyName(12, "icons8_sheep.ico");
-            this.imageList1.Images.SetKeyName(13, "icons8_shiba_inu.ico");
-            this.imageList1.Images.SetKeyName(14, "icons8_sparrowhawk.ico");
-            this.imageList1.Images.SetKeyName(15, "icons8_user.ico");
-            this.imageList1.Images.SetKeyName(16, "icons8_user_1.ico");
-            this.imageList1.Images.SetKeyName(17, "icons8_veterinarian.ico");
-            this.imageList1.Images.SetKeyName(18, "icons8_whatsapp.ico");
-            // 
-            // mySqlDataAdapter1
-            // 
-            this.mySqlDataAdapter1.DeleteCommand = null;
-            this.mySqlDataAdapter1.InsertCommand = null;
-            this.mySqlDataAdapter1.SelectCommand = null;
-            this.mySqlDataAdapter1.UpdateCommand = null;
-            // 
             // logo3
             // 
             this.logo3.BackColor = System.Drawing.Color.DarkGoldenrod;
@@ -454,48 +459,6 @@
             this.logo3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.logo3.TabIndex = 3;
             this.logo3.TabStop = false;
-            // 
-            // buttonEAnimal
-            // 
-            this.buttonEAnimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEAnimal.ForeColor = System.Drawing.Color.Red;
-            this.buttonEAnimal.Location = new System.Drawing.Point(49, 463);
-            this.buttonEAnimal.Name = "buttonEAnimal";
-            this.buttonEAnimal.Size = new System.Drawing.Size(181, 33);
-            this.buttonEAnimal.TabIndex = 14;
-            this.buttonEAnimal.Text = "Eliminar un registro";
-            this.buttonEAnimal.UseVisualStyleBackColor = true;
-            // 
-            // buttonRRevision
-            // 
-            this.buttonRRevision.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRRevision.ForeColor = System.Drawing.Color.Red;
-            this.buttonRRevision.Location = new System.Drawing.Point(49, 463);
-            this.buttonRRevision.Name = "buttonRRevision";
-            this.buttonRRevision.Size = new System.Drawing.Size(181, 33);
-            this.buttonRRevision.TabIndex = 23;
-            this.buttonRRevision.Text = "Eliminar un registro";
-            this.buttonRRevision.UseVisualStyleBackColor = true;
-            // 
-            // buttonIntroducirA
-            // 
-            this.buttonIntroducirA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonIntroducirA.Location = new System.Drawing.Point(353, 439);
-            this.buttonIntroducirA.Name = "buttonIntroducirA";
-            this.buttonIntroducirA.Size = new System.Drawing.Size(183, 51);
-            this.buttonIntroducirA.TabIndex = 15;
-            this.buttonIntroducirA.Text = "Introducir registro";
-            this.buttonIntroducirA.UseVisualStyleBackColor = true;
-            // 
-            // buttonIntroducirR
-            // 
-            this.buttonIntroducirR.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonIntroducirR.Location = new System.Drawing.Point(353, 374);
-            this.buttonIntroducirR.Name = "buttonIntroducirR";
-            this.buttonIntroducirR.Size = new System.Drawing.Size(183, 51);
-            this.buttonIntroducirR.TabIndex = 24;
-            this.buttonIntroducirR.Text = "Introducir registro";
-            this.buttonIntroducirR.UseVisualStyleBackColor = true;
             // 
             // Menu
             // 
@@ -508,13 +471,13 @@
             this.Name = "Menu";
             this.Text = "Form1";
             this.tabControl.ResumeLayout(false);
+            this.tabbasedatos.ResumeLayout(false);
             this.tabanimales.ResumeLayout(false);
             this.tabanimales.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo2)).EndInit();
             this.tabrevision.ResumeLayout(false);
             this.tabrevision.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tabbasedatos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.logo3)).EndInit();
             this.ResumeLayout(false);
 
@@ -543,10 +506,8 @@
         private System.Windows.Forms.TextBox textBoxNombre;
         private System.Windows.Forms.TextBox textBoxFecha;
         private System.Windows.Forms.TextBox textBoxMotivo;
-        private System.Windows.Forms.TextBox textBoxHora;
         private System.Windows.Forms.TextBox textBoxNombre2;
         private System.Windows.Forms.Label labelFecha;
-        private System.Windows.Forms.Label labelHora;
         private System.Windows.Forms.Label labelMotivo;
         private System.Windows.Forms.Label labelNombre2;
         private System.Windows.Forms.Button revisiones;
