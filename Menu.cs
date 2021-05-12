@@ -21,7 +21,6 @@ namespace EjemploTabs_2021
         {
             AñadirUsuario ventana = new AñadirUsuario();
             ventana.Show();
-
         }
 
         protected override void OnFormClosing(FormClosingEventArgs e)
@@ -49,14 +48,19 @@ namespace EjemploTabs_2021
 
         private void buttonEAnimal_Click(object sender, EventArgs e)
         {
-            EliminarAnimal ventana4 = new EliminarAnimal();
+            Aviso ventana4 = new Aviso();
             ventana4.Show();
         }
 
         private void buttonRRevision_Click(object sender, EventArgs e)
         {
-            EliminarRevision ventana5 = new EliminarRevision();
+            Aviso ventana5 = new Aviso();
             ventana5.Show();
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

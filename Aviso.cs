@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace EjemploTabs_2021
 {
-    public partial class EliminarAnimal : Form
+    public partial class Aviso : Form
     {
-        public EliminarAnimal()
+        public Aviso()
         {
             InitializeComponent();
+        }
+
+        private void buttonMenu_Click(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

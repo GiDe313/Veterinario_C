@@ -12,6 +12,8 @@ namespace EjemploTabs_2021
 {
     public partial class Animales : Form
     {
+        Conexion miConexion = new Conexion();
+
         public Animales()
         {
             InitializeComponent();

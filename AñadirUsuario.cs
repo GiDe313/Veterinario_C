@@ -29,6 +29,5 @@ namespace EjemploTabs_2021
                 MessageBox.Show("Ha ocurrido un error inesperado y no se ha podido insertar. Pruebe mas tarde");
             }
         }
-
     }
 }

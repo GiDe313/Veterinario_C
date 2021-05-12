@@ -46,5 +46,10 @@ namespace EjemploTabs_2021
             ventana.Show();
         }
 
+        private void recContraseña_Click(object sender, EventArgs e)
+        {
+            Aviso ventana2 = new Aviso();
+            ventana2.Show();
+        }
     }
 }

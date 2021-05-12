@@ -12,14 +12,17 @@ namespace EjemploTabs_2021
     {
         public MySqlConnection conexion; //variable que se encarga de conectarnos al servidor MySql
 
-        public Conexion() { //el constructor de la clase
+        public Conexion()
+        { //el constructor de la clase
             conexion = new MySqlConnection("Server=127.0.0.1; Database=veterinario; Uid=root; Pwd=; Port=3306 ");
         }
 
-        public Boolean loginInicial(String _DNI, String _password) {
-            try {
+        public Boolean loginInicial(String _DNI, String _password)
+        {
+            try
+            {
                 conexion.Open();
-                
+
                 MySqlCommand consulta = new MySqlCommand("SELECT * FROM login WHERE dni=@_DNI AND pass=@_password", conexion);
                 consulta.Parameters.AddWithValue("@_DNI", _DNI);
                 consulta.Parameters.AddWithValue("@_password", _password);
@@ -34,7 +37,8 @@ namespace EjemploTabs_2021
                 conexion.Close();
                 return false;
             }
-            catch (MySqlException e) {
+            catch (MySqlException e)
+            {
                 throw e;
             }
         }

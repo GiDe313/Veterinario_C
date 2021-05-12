@@ -63,6 +63,16 @@ namespace EjemploTabs_2021.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fondoBBDD {
+            get {
+                object obj = ResourceManager.GetObject("fondoBBDD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fondodepantalla {
             get {
                 object obj = ResourceManager.GetObject("fondodepantalla", resourceCulture);

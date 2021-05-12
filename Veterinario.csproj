@@ -95,6 +95,12 @@
     <Compile Include="Animales.Designer.cs">
       <DependentUpon>Animales.cs</DependentUpon>
     </Compile>
+    <Compile Include="Aviso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Aviso.Designer.cs">
+      <DependentUpon>Aviso.cs</DependentUpon>
+    </Compile>
     <Compile Include="AñadirUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -102,18 +108,6 @@
       <DependentUpon>AñadirUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="Conexion.cs" />
-    <Compile Include="EliminarAnimal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EliminarAnimal.Designer.cs">
-      <DependentUpon>EliminarAnimal.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EliminarRevision.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EliminarRevision.Designer.cs">
-      <DependentUpon>EliminarRevision.cs</DependentUpon>
-    </Compile>
     <Compile Include="Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,14 +137,11 @@
     <EmbeddedResource Include="Animales.resx">
       <DependentUpon>Animales.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Aviso.resx">
+      <DependentUpon>Aviso.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AñadirUsuario.resx">
       <DependentUpon>AñadirUsuario.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EliminarAnimal.resx">
-      <DependentUpon>EliminarAnimal.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EliminarRevision.resx">
-      <DependentUpon>EliminarRevision.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Menu.resx">
       <DependentUpon>Menu.cs</DependentUpon>
@@ -205,6 +196,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\fondoInicio.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondoBBDD.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

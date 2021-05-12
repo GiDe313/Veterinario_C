@@ -113,6 +113,7 @@
             this.recContraseña.TabIndex = 7;
             this.recContraseña.Text = "¿Has olvidado tu contraseña?(no funciona)";
             this.recContraseña.UseVisualStyleBackColor = true;
+            this.recContraseña.Click += new System.EventHandler(this.recContraseña_Click);
             // 
             // nombre
             // 
