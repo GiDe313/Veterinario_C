@@ -60,5 +60,32 @@ namespace EjemploTabs_2021
             ventana5.Show();
         }
 
+        private void buttonIAnimal_Click(object sender, EventArgs e)
+        {
+            Conexion miConexion = new Conexion();
+            Boolean resultado = miConexion.insertaAnimal(textBoxNombre.Text, textBoxDueño.Text, dateTimePickerNacimiento.Value, textBoxGenero.Text, textBoxEspecie.Text, textBoxObservaciones.Text);
+            if (resultado)
+            {
+                MessageBox.Show("INSERTADO CORRECTAMENTE");
+            }
+            else
+            {
+                MessageBox.Show("Ha ocurrido un error inesperado y no se ha podido insertar. Pruebe mas tarde");
+            }
+        }
+
+        private void buttonIRevision_Click(object sender, EventArgs e)
+        {
+            Conexion miConexion = new Conexion();
+            Boolean resultado = miConexion.insertaRevision(textBoxNombre2.Text, dateTimePickerFecha.Value, textBoxMotivo.Text);
+            if (resultado)
+            {
+                MessageBox.Show("INSERTADO CORRECTAMENTE");
+            }
+            else
+            {
+                MessageBox.Show("Ha ocurrido un error inesperado y no se ha podido insertar. Pruebe mas tarde");
+            }
+        }
     }
 }

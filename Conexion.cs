@@ -48,10 +48,67 @@ namespace EjemploTabs_2021
             try
             {
                 conexion.Open();
-                MySqlCommand consulta = new MySqlCommand("INSERT INTO login (dni, nombre, pass)  VALUES (@dni, @nombre, @pass)", conexion);
+                MySqlCommand consulta = new MySqlCommand("INSERT INTO animales (dni, nombre, pass)  VALUES (@dni, @nombre, @pass)", conexion);
                 consulta.Parameters.AddWithValue("@dni", _DNI);
                 consulta.Parameters.AddWithValue("@nombre", _Nombre);
                 consulta.Parameters.AddWithValue("@pass", _password);
+
+                int resultado = consulta.ExecuteNonQuery(); //Ejecuta el insert
+                if (resultado > 0)
+                {
+                    conexion.Close();
+                    //si entra aquí es porque ha hecho bien la inserción
+                    return true;
+                }
+                conexion.Close();
+                return false;
+            }
+            catch (MySqlException e)
+            {
+                return false;
+                throw e;
+            }
+        }
+
+        public Boolean insertaAnimal(String _Nombre, String _Dueño, DateTime _Nacimiento, String _Genero, String _Especie, String _Observacion)
+        {
+            try
+            {
+                conexion.Open();
+                MySqlCommand consulta = new MySqlCommand("INSERT INTO animales (Nombre, Dueño, Nacimiento, Genero, Especie, Observaciones)  VALUES (@nombre, @dueño, @nacimiento, @genero, @especie, @observaciones)", conexion);
+                consulta.Parameters.AddWithValue("@nombre", _Nombre);
+                consulta.Parameters.AddWithValue("@dueño", _Dueño);
+                consulta.Parameters.AddWithValue("@nacimiento", _Nacimiento);
+                consulta.Parameters.AddWithValue("@genero", _Genero);
+                consulta.Parameters.AddWithValue("@especie", _Especie);
+                consulta.Parameters.AddWithValue("@obsercaciones", _Observacion);
+
+                int resultado = consulta.ExecuteNonQuery(); //Ejecuta el insert
+                if (resultado > 0)
+                {
+                    conexion.Close();
+                    //si entra aquí es porque ha hecho bien la inserción
+                    return true;
+                }
+                conexion.Close();
+                return false;
+            }
+            catch (MySqlException e)
+            {
+                return false;
+                throw e;
+            }
+        }
+
+        public Boolean insertaRevision(String _Nombre, DateTime _Fecha, String _Motivo)
+        {
+            try
+            {
+                conexion.Open();
+                MySqlCommand consulta = new MySqlCommand("INSERT INTO revisiones (Nombre, Fecha, Motivo)  VALUES (@nombre, @fecha, @motivo)", conexion);
+                consulta.Parameters.AddWithValue("@nombre", _Nombre);
+                consulta.Parameters.AddWithValue("@fecha", _Fecha);
+                consulta.Parameters.AddWithValue("@motivo", _Motivo);
 
                 int resultado = consulta.ExecuteNonQuery(); //Ejecuta el insert
                 if (resultado > 0)

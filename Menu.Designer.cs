@@ -35,10 +35,8 @@
             this.buttonIAnimal = new System.Windows.Forms.Button();
             this.buttonEAnimal = new System.Windows.Forms.Button();
             this.textBoxObservaciones = new System.Windows.Forms.TextBox();
-            this.textBoxDueño = new System.Windows.Forms.TextBox();
             this.textBoxEspecie = new System.Windows.Forms.TextBox();
             this.textBoxGenero = new System.Windows.Forms.TextBox();
-            this.textBoxNacimiento = new System.Windows.Forms.TextBox();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.labelDueño = new System.Windows.Forms.Label();
             this.labelNacimiento = new System.Windows.Forms.Label();
@@ -64,6 +62,8 @@
             this.listaImagenes = new System.Windows.Forms.ImageList(this.components);
             this.mySqlDataAdapter1 = new MySql.Data.MySqlClient.MySqlDataAdapter();
             this.dateTimePickerFecha = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerNacimiento = new System.Windows.Forms.DateTimePicker();
+            this.textBoxDueño = new System.Windows.Forms.TextBox();
             this.tabControl.SuspendLayout();
             this.tabAnimales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo1)).BeginInit();
@@ -91,13 +91,13 @@
             // 
             this.tabAnimales.BackgroundImage = global::EjemploTabs_2021.Properties.Resources.fondodepantalla;
             this.tabAnimales.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tabAnimales.Controls.Add(this.dateTimePickerNacimiento);
             this.tabAnimales.Controls.Add(this.buttonIAnimal);
             this.tabAnimales.Controls.Add(this.buttonEAnimal);
             this.tabAnimales.Controls.Add(this.textBoxObservaciones);
             this.tabAnimales.Controls.Add(this.textBoxDueño);
             this.tabAnimales.Controls.Add(this.textBoxEspecie);
             this.tabAnimales.Controls.Add(this.textBoxGenero);
-            this.tabAnimales.Controls.Add(this.textBoxNacimiento);
             this.tabAnimales.Controls.Add(this.textBoxNombre);
             this.tabAnimales.Controls.Add(this.labelDueño);
             this.tabAnimales.Controls.Add(this.labelNacimiento);
@@ -124,6 +124,7 @@
             this.buttonIAnimal.TabIndex = 15;
             this.buttonIAnimal.Text = "Introducir registro";
             this.buttonIAnimal.UseVisualStyleBackColor = true;
+            this.buttonIAnimal.Click += new System.EventHandler(this.buttonIAnimal_Click);
             // 
             // buttonEAnimal
             // 
@@ -146,14 +147,6 @@
             this.textBoxObservaciones.Size = new System.Drawing.Size(353, 78);
             this.textBoxObservaciones.TabIndex = 13;
             // 
-            // textBoxDueño
-            // 
-            this.textBoxDueño.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDueño.Location = new System.Drawing.Point(183, 155);
-            this.textBoxDueño.Name = "textBoxDueño";
-            this.textBoxDueño.Size = new System.Drawing.Size(353, 24);
-            this.textBoxDueño.TabIndex = 12;
-            // 
             // textBoxEspecie
             // 
             this.textBoxEspecie.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -169,14 +162,6 @@
             this.textBoxGenero.Name = "textBoxGenero";
             this.textBoxGenero.Size = new System.Drawing.Size(353, 24);
             this.textBoxGenero.TabIndex = 10;
-            // 
-            // textBoxNacimiento
-            // 
-            this.textBoxNacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxNacimiento.Location = new System.Drawing.Point(183, 200);
-            this.textBoxNacimiento.Name = "textBoxNacimiento";
-            this.textBoxNacimiento.Size = new System.Drawing.Size(353, 24);
-            this.textBoxNacimiento.TabIndex = 9;
             // 
             // textBoxNombre
             // 
@@ -294,18 +279,19 @@
             // buttonIRevision
             // 
             this.buttonIRevision.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonIRevision.Location = new System.Drawing.Point(353, 323);
+            this.buttonIRevision.Location = new System.Drawing.Point(353, 354);
             this.buttonIRevision.Name = "buttonIRevision";
             this.buttonIRevision.Size = new System.Drawing.Size(183, 51);
             this.buttonIRevision.TabIndex = 24;
             this.buttonIRevision.Text = "Introducir registro";
             this.buttonIRevision.UseVisualStyleBackColor = true;
+            this.buttonIRevision.Click += new System.EventHandler(this.buttonIRevision_Click);
             // 
             // buttonERevision
             // 
             this.buttonERevision.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonERevision.ForeColor = System.Drawing.Color.Red;
-            this.buttonERevision.Location = new System.Drawing.Point(49, 353);
+            this.buttonERevision.Location = new System.Drawing.Point(49, 384);
             this.buttonERevision.Name = "buttonERevision";
             this.buttonERevision.Size = new System.Drawing.Size(181, 33);
             this.buttonERevision.TabIndex = 23;
@@ -455,10 +441,25 @@
             // 
             // dateTimePickerFecha
             // 
-            this.dateTimePickerFecha.Location = new System.Drawing.Point(183, 156);
+            this.dateTimePickerFecha.Location = new System.Drawing.Point(183, 154);
             this.dateTimePickerFecha.Name = "dateTimePickerFecha";
             this.dateTimePickerFecha.Size = new System.Drawing.Size(353, 20);
-            this.dateTimePickerFecha.TabIndex = 25;
+            this.dateTimePickerFecha.TabIndex = 26;
+            // 
+            // dateTimePickerNacimiento
+            // 
+            this.dateTimePickerNacimiento.Location = new System.Drawing.Point(183, 204);
+            this.dateTimePickerNacimiento.Name = "dateTimePickerNacimiento";
+            this.dateTimePickerNacimiento.Size = new System.Drawing.Size(353, 20);
+            this.dateTimePickerNacimiento.TabIndex = 18;
+            // 
+            // textBoxDueño
+            // 
+            this.textBoxDueño.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDueño.Location = new System.Drawing.Point(183, 155);
+            this.textBoxDueño.Name = "textBoxDueño";
+            this.textBoxDueño.Size = new System.Drawing.Size(353, 24);
+            this.textBoxDueño.TabIndex = 12;
             // 
             // Menu
             // 
@@ -499,10 +500,8 @@
         private System.Windows.Forms.Label labelEspecie;
         private System.Windows.Forms.Label labelObservaciones;
         private System.Windows.Forms.TextBox textBoxObservaciones;
-        private System.Windows.Forms.TextBox textBoxDueño;
         private System.Windows.Forms.TextBox textBoxEspecie;
         private System.Windows.Forms.TextBox textBoxGenero;
-        private System.Windows.Forms.TextBox textBoxNacimiento;
         private System.Windows.Forms.TextBox textBoxNombre;
         private System.Windows.Forms.TextBox textBoxMotivo;
         private System.Windows.Forms.TextBox textBoxNombre2;
@@ -519,6 +518,8 @@
         private System.Windows.Forms.Button buttonIAnimal;
         private System.Windows.Forms.Button buttonIRevision;
         private System.Windows.Forms.DateTimePicker dateTimePickerFecha;
+        private System.Windows.Forms.DateTimePicker dateTimePickerNacimiento;
+        private System.Windows.Forms.TextBox textBoxDueño;
     }
 }
 

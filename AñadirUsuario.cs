@@ -22,7 +22,6 @@ namespace EjemploTabs_2021
 
         private void insertaUsuario_Click(object sender, EventArgs e)
         {
-            //miConexion.insertausuario(textBoxDNI.Text, textBoxNombre.Text, textBoxPASS.Text);
             Conexion miConexion = new Conexion();
             Boolean resultado = miConexion.insertausuario(textBoxDNI.Text, textBoxNombre.Text, textBoxPASS.Text);
             if (resultado)
