@@ -470,7 +470,6 @@
             this.MaximizeBox = false;
             this.Name = "Menu";
             this.Text = "Menu";
-            this.Load += new System.EventHandler(this.Menu_Load);
             this.tabControl.ResumeLayout(false);
             this.tabAnimales.ResumeLayout(false);
             this.tabAnimales.PerformLayout();

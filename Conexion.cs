@@ -48,10 +48,10 @@ namespace EjemploTabs_2021
             try
             {
                 conexion.Open();
-                MySqlCommand consulta = new MySqlCommand("INSERT INTO login (dni, nombre, pass)  VALUES (@_DNI, @_Nombre, @_password, 0)", conexion);
-                consulta.Parameters.AddWithValue("@_DNI", _DNI);
-                consulta.Parameters.AddWithValue("@_Nombre", _Nombre);
-                consulta.Parameters.AddWithValue("@_password", _password);
+                MySqlCommand consulta = new MySqlCommand("INSERT INTO login (dni, nombre, pass)  VALUES (@dni, @nombre, @pass)", conexion);
+                consulta.Parameters.AddWithValue("@dni", _DNI);
+                consulta.Parameters.AddWithValue("@nombre", _Nombre);
+                consulta.Parameters.AddWithValue("@pass", _password);
 
                 int resultado = consulta.ExecuteNonQuery(); //Ejecuta el insert
                 if (resultado > 0)

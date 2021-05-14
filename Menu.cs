@@ -12,6 +12,8 @@ namespace EjemploTabs_2021
 {
     public partial class Menu : Form
     {
+        Conexion miConexion = new Conexion();
+
         public Menu()
         {
             InitializeComponent();
@@ -58,9 +60,5 @@ namespace EjemploTabs_2021
             ventana5.Show();
         }
 
-        private void Menu_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

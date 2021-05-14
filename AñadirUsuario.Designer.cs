@@ -30,12 +30,12 @@
         {
             this.textBoxNombre = new System.Windows.Forms.TextBox();
             this.textBoxPASS = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.textBoxDNI = new System.Windows.Forms.TextBox();
             this.labelNombre = new System.Windows.Forms.Label();
             this.labelPass = new System.Windows.Forms.Label();
             this.labelDNI = new System.Windows.Forms.Label();
             this.logoVetivir = new System.Windows.Forms.PictureBox();
+            this.insertaUsuario = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.logoVetivir)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,17 +52,6 @@
             this.textBoxPASS.Name = "textBoxPASS";
             this.textBoxPASS.Size = new System.Drawing.Size(220, 20);
             this.textBoxPASS.TabIndex = 7;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(69, 169);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(172, 43);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Añadir";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBoxDNI
             // 
@@ -114,17 +103,28 @@
             this.logoVetivir.TabIndex = 15;
             this.logoVetivir.TabStop = false;
             // 
+            // insertaUsuario
+            // 
+            this.insertaUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.insertaUsuario.Location = new System.Drawing.Point(82, 161);
+            this.insertaUsuario.Name = "insertaUsuario";
+            this.insertaUsuario.Size = new System.Drawing.Size(172, 43);
+            this.insertaUsuario.TabIndex = 16;
+            this.insertaUsuario.Text = "Añadir";
+            this.insertaUsuario.UseVisualStyleBackColor = true;
+            this.insertaUsuario.Click += new System.EventHandler(this.insertaUsuario_Click);
+            // 
             // AñadirUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDarkDark;
             this.ClientSize = new System.Drawing.Size(487, 229);
+            this.Controls.Add(this.insertaUsuario);
             this.Controls.Add(this.labelDNI);
             this.Controls.Add(this.labelPass);
             this.Controls.Add(this.textBoxDNI);
             this.Controls.Add(this.labelNombre);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.textBoxPASS);
             this.Controls.Add(this.textBoxNombre);
             this.Controls.Add(this.logoVetivir);
@@ -139,11 +139,11 @@
         #endregion
         private System.Windows.Forms.TextBox textBoxNombre;
         private System.Windows.Forms.TextBox textBoxPASS;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBoxDNI;
         private System.Windows.Forms.Label labelNombre;
         private System.Windows.Forms.Label labelPass;
         private System.Windows.Forms.Label labelDNI;
         private System.Windows.Forms.PictureBox logoVetivir;
+        private System.Windows.Forms.Button insertaUsuario;
     }
 }
