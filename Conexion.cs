@@ -23,16 +23,19 @@ namespace EjemploTabs_2021
             {
                 conexion.Open();
 
-                MySqlCommand consulta = new MySqlCommand("SELECT * FROM login WHERE dni=@_DNI AND pass=@_password", conexion);
+                MySqlCommand consulta = new MySqlCommand("SELECT * FROM login WHERE dni=@_DNI ", conexion);
                 consulta.Parameters.AddWithValue("@_DNI", _DNI);
-                consulta.Parameters.AddWithValue("@_password", _password);
 
                 MySqlDataReader resultado = consulta.ExecuteReader(); //guardo el resultado de la query
                 if (resultado.Read())
                 {
+                    String passwordHash = resultado.GetString("pass");
+                    if (BCrypt.Net.BCrypt.Verify(_password, passwordHash))
+                        {
+                        return true;
+                        }
                     conexion.Close();
-                    //si entra aquí es porque sí que estan bien el usuario y la contraseña
-                    return true;
+                    return false;
                 }
                 conexion.Close();
                 return false;
@@ -48,7 +51,7 @@ namespace EjemploTabs_2021
             try
             {
                 conexion.Open();
-                MySqlCommand consulta = new MySqlCommand("INSERT INTO animales (dni, nombre, pass)  VALUES (@dni, @nombre, @pass)", conexion);
+                MySqlCommand consulta = new MySqlCommand("INSERT INTO login (dni, nombre, pass)  VALUES (@dni, @nombre, @pass)", conexion);
                 consulta.Parameters.AddWithValue("@dni", _DNI);
                 consulta.Parameters.AddWithValue("@nombre", _Nombre);
                 consulta.Parameters.AddWithValue("@pass", _password);
@@ -75,7 +78,7 @@ namespace EjemploTabs_2021
             try
             {
                 conexion.Open();
-                MySqlCommand consulta = new MySqlCommand("INSERT INTO animales (Nombre, Dueño, Nacimiento, Genero, Especie, Observaciones)  VALUES (@nombre, @dueño, @nacimiento, @genero, @especie, @observaciones)", conexion);
+                MySqlCommand consulta = new MySqlCommand("INSERT INTO animal (Nombre, Dueño, Nacimiento, Genero, Especie, Observaciones)  VALUES (@nombre, @dueño, @nacimiento, @genero, @especie, @observaciones)", conexion);
                 consulta.Parameters.AddWithValue("@nombre", _Nombre);
                 consulta.Parameters.AddWithValue("@dueño", _Dueño);
                 consulta.Parameters.AddWithValue("@nacimiento", _Nacimiento);

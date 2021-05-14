@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BCrypt.Net;
 
 namespace EjemploTabs_2021
 {
@@ -22,8 +23,10 @@ namespace EjemploTabs_2021
 
         private void insertaUsuario_Click(object sender, EventArgs e)
         {
+            String textoPassword = textBoxPASS.Text;
+            String myHash = BCrypt.Net.BCrypt.HashPassword(textoPassword, BCrypt.Net.BCrypt.GenerateSalt());
             Conexion miConexion = new Conexion();
-            Boolean resultado = miConexion.insertausuario(textBoxDNI.Text, textBoxNombre.Text, textBoxPASS.Text);
+            Boolean resultado = miConexion.insertausuario(textBoxDNI.Text, textBoxNombre.Text, myHash);
             if (resultado)
             {
                 MessageBox.Show("INSERTADO CORRECTAMENTE");
