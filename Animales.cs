@@ -18,5 +18,19 @@ namespace EjemploTabs_2021
         {
             InitializeComponent();
         }
+
+        private void buttonBuscar_Click(object sender, EventArgs e)
+        {
+            Conexion miConexion = new Conexion();
+            Boolean resultado = miConexion.muestraAnimales(textBoxNombre.Text);
+            if (resultado)
+            {
+                MessageBox.Show("INSERTADO CORRECTAMENTE");
+            }
+            else
+            {
+                MessageBox.Show("Ha ocurrido un error inesperado y no se ha podido insertar. Pruebe mas tarde");
+            }
+        }
     }
 }

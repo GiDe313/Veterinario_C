@@ -32,9 +32,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.tabAnimales = new System.Windows.Forms.TabPage();
+            this.dateTimePickerNacimiento = new System.Windows.Forms.DateTimePicker();
             this.buttonIAnimal = new System.Windows.Forms.Button();
             this.buttonEAnimal = new System.Windows.Forms.Button();
             this.textBoxObservaciones = new System.Windows.Forms.TextBox();
+            this.textBoxDueño = new System.Windows.Forms.TextBox();
             this.textBoxEspecie = new System.Windows.Forms.TextBox();
             this.textBoxGenero = new System.Windows.Forms.TextBox();
             this.textBoxNombre = new System.Windows.Forms.TextBox();
@@ -46,6 +48,7 @@
             this.labelNombre = new System.Windows.Forms.Label();
             this.logo1 = new System.Windows.Forms.PictureBox();
             this.tabRevision = new System.Windows.Forms.TabPage();
+            this.dateTimePickerFecha = new System.Windows.Forms.DateTimePicker();
             this.buttonIRevision = new System.Windows.Forms.Button();
             this.buttonERevision = new System.Windows.Forms.Button();
             this.textBoxMotivo = new System.Windows.Forms.TextBox();
@@ -58,12 +61,8 @@
             this.logo3 = new System.Windows.Forms.PictureBox();
             this.buttonRevisiones = new System.Windows.Forms.Button();
             this.buttonAnimales = new System.Windows.Forms.Button();
-            this.buttonUsuarios = new System.Windows.Forms.Button();
             this.listaImagenes = new System.Windows.Forms.ImageList(this.components);
             this.mySqlDataAdapter1 = new MySql.Data.MySqlClient.MySqlDataAdapter();
-            this.dateTimePickerFecha = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerNacimiento = new System.Windows.Forms.DateTimePicker();
-            this.textBoxDueño = new System.Windows.Forms.TextBox();
             this.tabControl.SuspendLayout();
             this.tabAnimales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.logo1)).BeginInit();
@@ -115,6 +114,13 @@
             this.tabAnimales.Text = "Registrar animales";
             this.tabAnimales.UseVisualStyleBackColor = true;
             // 
+            // dateTimePickerNacimiento
+            // 
+            this.dateTimePickerNacimiento.Location = new System.Drawing.Point(183, 204);
+            this.dateTimePickerNacimiento.Name = "dateTimePickerNacimiento";
+            this.dateTimePickerNacimiento.Size = new System.Drawing.Size(353, 20);
+            this.dateTimePickerNacimiento.TabIndex = 18;
+            // 
             // buttonIAnimal
             // 
             this.buttonIAnimal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -146,6 +152,14 @@
             this.textBoxObservaciones.Name = "textBoxObservaciones";
             this.textBoxObservaciones.Size = new System.Drawing.Size(353, 78);
             this.textBoxObservaciones.TabIndex = 13;
+            // 
+            // textBoxDueño
+            // 
+            this.textBoxDueño.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxDueño.Location = new System.Drawing.Point(183, 155);
+            this.textBoxDueño.Name = "textBoxDueño";
+            this.textBoxDueño.Size = new System.Drawing.Size(353, 24);
+            this.textBoxDueño.TabIndex = 12;
             // 
             // textBoxEspecie
             // 
@@ -276,6 +290,13 @@
             this.tabRevision.Text = "Añadir revisiones";
             this.tabRevision.UseVisualStyleBackColor = true;
             // 
+            // dateTimePickerFecha
+            // 
+            this.dateTimePickerFecha.Location = new System.Drawing.Point(183, 154);
+            this.dateTimePickerFecha.Name = "dateTimePickerFecha";
+            this.dateTimePickerFecha.Size = new System.Drawing.Size(353, 20);
+            this.dateTimePickerFecha.TabIndex = 26;
+            // 
             // buttonIRevision
             // 
             this.buttonIRevision.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -371,7 +392,6 @@
             this.tabBasedatos.Controls.Add(this.logo3);
             this.tabBasedatos.Controls.Add(this.buttonRevisiones);
             this.tabBasedatos.Controls.Add(this.buttonAnimales);
-            this.tabBasedatos.Controls.Add(this.buttonUsuarios);
             this.tabBasedatos.ImageIndex = 2;
             this.tabBasedatos.Location = new System.Drawing.Point(4, 39);
             this.tabBasedatos.Name = "tabBasedatos";
@@ -394,7 +414,7 @@
             // buttonRevisiones
             // 
             this.buttonRevisiones.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRevisiones.Location = new System.Drawing.Point(111, 310);
+            this.buttonRevisiones.Location = new System.Drawing.Point(111, 296);
             this.buttonRevisiones.Name = "buttonRevisiones";
             this.buttonRevisiones.Size = new System.Drawing.Size(363, 77);
             this.buttonRevisiones.TabIndex = 2;
@@ -405,24 +425,13 @@
             // buttonAnimales
             // 
             this.buttonAnimales.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAnimales.Location = new System.Drawing.Point(111, 207);
+            this.buttonAnimales.Location = new System.Drawing.Point(111, 154);
             this.buttonAnimales.Name = "buttonAnimales";
             this.buttonAnimales.Size = new System.Drawing.Size(363, 77);
             this.buttonAnimales.TabIndex = 1;
             this.buttonAnimales.Text = "Animales";
             this.buttonAnimales.UseVisualStyleBackColor = true;
             this.buttonAnimales.Click += new System.EventHandler(this.animales_Click);
-            // 
-            // buttonUsuarios
-            // 
-            this.buttonUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUsuarios.Location = new System.Drawing.Point(111, 104);
-            this.buttonUsuarios.Name = "buttonUsuarios";
-            this.buttonUsuarios.Size = new System.Drawing.Size(363, 77);
-            this.buttonUsuarios.TabIndex = 0;
-            this.buttonUsuarios.Text = "Usuarios";
-            this.buttonUsuarios.UseVisualStyleBackColor = true;
-            this.buttonUsuarios.Click += new System.EventHandler(this.usuarios_Click);
             // 
             // listaImagenes
             // 
@@ -438,28 +447,6 @@
             this.mySqlDataAdapter1.InsertCommand = null;
             this.mySqlDataAdapter1.SelectCommand = null;
             this.mySqlDataAdapter1.UpdateCommand = null;
-            // 
-            // dateTimePickerFecha
-            // 
-            this.dateTimePickerFecha.Location = new System.Drawing.Point(183, 154);
-            this.dateTimePickerFecha.Name = "dateTimePickerFecha";
-            this.dateTimePickerFecha.Size = new System.Drawing.Size(353, 20);
-            this.dateTimePickerFecha.TabIndex = 26;
-            // 
-            // dateTimePickerNacimiento
-            // 
-            this.dateTimePickerNacimiento.Location = new System.Drawing.Point(183, 204);
-            this.dateTimePickerNacimiento.Name = "dateTimePickerNacimiento";
-            this.dateTimePickerNacimiento.Size = new System.Drawing.Size(353, 20);
-            this.dateTimePickerNacimiento.TabIndex = 18;
-            // 
-            // textBoxDueño
-            // 
-            this.textBoxDueño.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxDueño.Location = new System.Drawing.Point(183, 155);
-            this.textBoxDueño.Name = "textBoxDueño";
-            this.textBoxDueño.Size = new System.Drawing.Size(353, 24);
-            this.textBoxDueño.TabIndex = 12;
             // 
             // Menu
             // 
@@ -510,7 +497,6 @@
         private System.Windows.Forms.Label labelNombre2;
         private System.Windows.Forms.Button buttonRevisiones;
         private System.Windows.Forms.Button buttonAnimales;
-        private System.Windows.Forms.Button buttonUsuarios;
         private MySql.Data.MySqlClient.MySqlDataAdapter mySqlDataAdapter1;
         private System.Windows.Forms.PictureBox logo3;
         private System.Windows.Forms.Button buttonEAnimal;

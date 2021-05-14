@@ -78,13 +78,13 @@ namespace EjemploTabs_2021
             try
             {
                 conexion.Open();
-                MySqlCommand consulta = new MySqlCommand("INSERT INTO animal (Nombre, Dueño, Nacimiento, Genero, Especie, Observaciones)  VALUES (@nombre, @dueño, @nacimiento, @genero, @especie, @observaciones)", conexion);
+                MySqlCommand consulta = new MySqlCommand("INSERT INTO animal (Nombre, Amo, Nacimiento, Genero, Especie, Observaciones)  VALUES (@nombre, @amo, @nacimiento, @genero, @especie, @observaciones)", conexion);
                 consulta.Parameters.AddWithValue("@nombre", _Nombre);
-                consulta.Parameters.AddWithValue("@dueño", _Dueño);
+                consulta.Parameters.AddWithValue("@amo", _Dueño);
                 consulta.Parameters.AddWithValue("@nacimiento", _Nacimiento);
                 consulta.Parameters.AddWithValue("@genero", _Genero);
                 consulta.Parameters.AddWithValue("@especie", _Especie);
-                consulta.Parameters.AddWithValue("@obsercaciones", _Observacion);
+                consulta.Parameters.AddWithValue("@observaciones", _Observacion);
 
                 int resultado = consulta.ExecuteNonQuery(); //Ejecuta el insert
                 if (resultado > 0)
@@ -128,6 +128,13 @@ namespace EjemploTabs_2021
                 return false;
                 throw e;
             }
+        }
+
+        public Boolean muestraAnimales (String _Nombre)
+        {
+            MySqlCommand consulta = new MySqlCommand("SELECT * FROM animal WHERE Nombre=@_nombre ", conexion);
+            consulta.Parameters.AddWithValue("@_nombre", _Nombre);
+            return true;
         }
     }
 }
